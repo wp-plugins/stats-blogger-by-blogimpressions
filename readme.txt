@@ -1,16 +1,13 @@
 === Analytics stats by blogimpressions ===
-Plugin Name: Analytics stats by blogimpressions
-Version: 2.1
+Contributors: blogimpressions
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SUTHRY2TSHAYN
-URI: http://www.blogimpressions.com
 Tags: Stats, Stats, Stat, Counter, analytics, bbpress, analytic, hidden, hidden counter, visitor, visitors, hit, buddypress, hits, count, widget, admin, image, images, Post, plugin, posts, sidebar, google, page, comments, shortcode, twitter, track, tracking, geo, geotracking, geotargeting, geolocation, maxmind, online users, online, analyze, pageviews, reports, spider, statistics, page views, design counter, users, unique visitors, unique, realtime, views, web, page, webpage views, web page views, counters, statscounter, stats counter, statistic, wassup, google analytics
-Requires at least: 4.0.0
+Requires at least: 3.3
 Tested up to: 4.2.2
 Stable tag: trunk
-License: GPLv2 or later
+License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Author: blogimpressions
-Contributors: blogimpressions.com
+
 
 Analytics stats by blogimpressions Track your WordPress site easily with the latest tracking codes With Google Analytics or Mixpanel.
 
