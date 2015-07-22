@@ -9,7 +9,7 @@ Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Author: blogimpressions.com
+Author: blogimpressions
 Contributors: blogimpressions.com
 
 Analytics stats by blogimpressions Track your WordPress site easily with the latest tracking codes With Google Analytics or Mixpanel.
