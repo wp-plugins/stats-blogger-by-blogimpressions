@@ -15,6 +15,7 @@ Google Analytics and Mixpanel by blogimpressions Track your WordPress site easil
 
 The Google Analytics and Mixpanel by blogimpressions plugin for WordPress allows you to track your blog easily and always stays up to date with the newest features in Google Analytics and Mixpanel.
 
+https://www.youtube.com/watch?v=FnLHO3Pn5n0
 
 Full list of features:
 
