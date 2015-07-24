@@ -1,9 +1,9 @@
 === Google Analytics and Mixpanel by blogimpressions ===
 Contributors: blogimpressions
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SUTHRY2TSHAYN
-Tags: google analytics, Stats, Stats, Stat, Counter, analytics, bbpress, analytic, hidden, hidden counter, visitor, visitors, hit, buddypress, hits, count, widget, admin, image, images, Post, plugin, posts, sidebar, google, page, comments, shortcode, twitter, track, tracking, geo, geotracking, geotargeting, geolocation, maxmind, online users, online, analyze, pageviews, reports, spider, statistics, page views, design counter, users, unique visitors, unique, realtime, views, web, page, webpage views, web page views, counters, statscounter, stats counter, statistic, wassup, captcha, Contact Form,
+Tags: google,analytics,google analytics,dashboard,analytics dashboard,google analytics dashboard,google analytics plugin,google analytics widget,tracking,universal google analytics,realtime,multisite,gadwp
 Requires at least: 3.3
-Tested up to: 4.2.2
+Tested up to: 4.2.3
 Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
