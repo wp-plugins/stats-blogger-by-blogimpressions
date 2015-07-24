@@ -1,7 +1,7 @@
 === Google Analytics and Mixpanel by blogimpressions ===
 Contributors: blogimpressions
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SUTHRY2TSHAYN
-Tags: google analytics, Stats, Stats, Stat, Counter, analytics, bbpress, analytic, hidden, hidden counter, visitor, visitors, hit, buddypress, hits, count, widget, admin, image, images, Post, plugin, posts, sidebar, google, page, comments, shortcode, twitter, track, tracking, geo, geotracking, geotargeting, geolocation, maxmind, online users, online, analyze, pageviews, reports, spider, statistics, page views, design counter, users, unique visitors, unique, realtime, views, web, page, webpage views, web page views, counters, statscounter, stats counter, statistic, wassup,
+Tags: google analytics, Stats, Stats, Stat, Counter, analytics, bbpress, analytic, hidden, hidden counter, visitor, visitors, hit, buddypress, hits, count, widget, admin, image, images, Post, plugin, posts, sidebar, google, page, comments, shortcode, twitter, track, tracking, geo, geotracking, geotargeting, geolocation, maxmind, online users, online, analyze, pageviews, reports, spider, statistics, page views, design counter, users, unique visitors, unique, realtime, views, web, page, webpage views, web page views, counters, statscounter, stats counter, statistic, wassup, captcha, Contact Form,
 Requires at least: 3.3
 Tested up to: 4.2.2
 Stable tag: trunk
@@ -53,6 +53,14 @@ This section describes how to install the plugin and get it working.
 1. Go to the options panel under the 'blogimpressions' menu and add your Google Analytics account number or Mixpanel token.
 
 == Other ==
+
+some of what I believed when doing this Google Analytics & Mixpanel plugins: (some of these are work in progress ;-)
+
+* Google Analytics and Mixpanel plugin should be simple
+* Google Analytics and Mixpanel plugin should be easy to install
+* Google Analytics and Mixpanel plugin should work the minute you press "save changes"
+* Google Analytics and Mixpanel plugin should be easy to setup for any kind of users
+* Google Analytics and Mixpanel plugin should support all languages
 
 * Google Analytics or Mixpanel - total impressions;
 * Google Analytics or Mixpanel total clicks;
