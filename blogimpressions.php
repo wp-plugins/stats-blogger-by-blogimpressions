@@ -163,7 +163,7 @@ function blogimpressions_page_handler()
     </form>
 
 	<p class="submit">
-		<?php _e('*By pressing "Save Changes" I confirm I have read and accepted BlogImpressions', 'blogimpressions')?> <a href="http://wordpressview.com/index.php/sample-page/terms-conditions/" target="_blank" style="font-weight: bold"><?php _e('terms of use', 'blogimpressions')?></a> 
+		<?php _e('*By pressing "Save Changes" I confirm I have read and accepted BlogImpressions', 'blogimpressions')?> <a href="http://blogimpressions.com/index.php/terms-conditions-2/" target="_blank" style="font-weight: bold"><?php _e('terms of use', 'blogimpressions')?></a> 
 	</p>
 	<p>For support, mail us at: <a href="mailto:support@blogimpressions.com">support@blogimpressions.com</a></p>
 </div>
