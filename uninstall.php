@@ -11,7 +11,4 @@ delete_option('blogimpressions_version');
 delete_option('blogimpressions_registered');
 delete_option('blogimpressions_tracking_id');
 delete_option('blogimpressions_token_id');
-delete_option('blogimpressions_app_id');
-delete_option('blogimpressions_key');
-delete_option('blogimpressions_secret');
 ?>
