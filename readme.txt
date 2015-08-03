@@ -117,6 +117,10 @@ In the following lines you will see a comparison of Google Analytics vs Mixpanel
 
 = 2.1 =
 
+* bug fix: Can't save both ID's and token of Google Analytics and MixPanel - solved.
+
+= 2.1 =
+
 Release Date: July 17th, 2015
 
 * first version!

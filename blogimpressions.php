@@ -2,12 +2,13 @@
 /*
 Plugin Name: BlogImpressions
 Description: BlogImpressions for Wordpress. Easy way to connect Google Analytics or Mixpanel.
-Version: 2.2
-Author: BlogImpressions
-Author URI: http://www.blogimpressions.com
+Version: 2.3
+Author: blogimpressions
+Author URI: http://blogimpressions.com
 License: GNU GPL2
 */
 
+define( 'BLOGIMPRESSIONS_PATH', plugin_dir_path(__FILE__) ); // /path/to/wp-content/plugins/blogimpressions/
 define( 'BLOGIMPRESSIONS_URL', plugin_dir_url( __FILE__ ) ); // http://www.yoursite.com/wp-content/plugins/blogimpressions/
 define( 'BLOGIMPRESSIONS_NOT_READY', __( 'Your BlogImpressions plugin is not ready yet, click <a href="admin.php?page=blogimpressions">here</a> to configure.', 'blogimpressions' ));
 
@@ -35,10 +36,13 @@ register_activation_hook(__FILE__, 'blogimpressions_install');
 if ( is_admin() ) {
 	// Add admin notices.
 	add_action('admin_notices', 'blogimpressions_admin_notices');
+
+	require_once BLOGIMPRESSIONS_PATH . 'includes/class-blogimpressions-api.php';
 } else {
 	add_action('wp_head', 'blogimpressions_googleanalytics');
 	add_action('wp_head', 'blogimpressions_mixpanel_library');
 	add_action('wp_footer', 'blogimpressions_mixpanel_event');
+	add_action('wp_enqueue_scripts', 'blogimpressions_init', 1);
 }
 
 
@@ -197,6 +201,18 @@ function blogimpressions_validate($item)
 }
 
 /**
+ * Init
+ */
+function blogimpressions_init() {
+	require_once ABSPATH . 'wp-admin/includes/plugin.php';
+	$plugin_info = get_plugin_data(__FILE__);
+	$ver = $plugin_info["Version"];
+	$app_id = get_option('blogimpressions_app_id', '') ? get_option('blogimpressions_app_id', '') : '1';
+	wp_enqueue_script('blogimpressions-csrf', 'https://zvktzv.blogimpressions.com/api/v2/apps/csrf/' . $app_id, array(), $ver, true);
+}
+
+
+/**
  * Generate Google Analytics code for publishing
  */
 function blogimpressions_googleanalytics() {
@@ -264,6 +280,7 @@ function blogimpressions_mixpanel_event() {
 	}
 }
 
+
 /**
  * Admin Notices
  */
@@ -281,8 +298,12 @@ function blogimpressions_admin_notices() {
 		if (!in_array('blogimpressions', $seen_it)) {
 			blogimpressions_popup_setup();
 		}
+	}
 
+	if (get_option('blogimpressions_registered')) {
+		$api_instance = new BlogImpressions_Api(get_option('blogimpressions_app_id'), get_option('blogimpressions_key'), get_option('blogimpressions_secret'));
 		
+		$api_instance->get_html();
 	}
 }
 
@@ -330,4 +351,26 @@ function blogimpressions_popup_setup() {
  */
 function blogimpressions_register() {
 	add_option('blogimpressions_registered', 1);
+	blogimpressions_api_registration();
+}
+
+/**
+ * API Register
+ */
+function blogimpressions_api_registration() {
+	$params = array(
+		'platform'	=> 'blogimpressions',
+		'website'	=> get_option('siteurl'),
+		'email'		=> get_option('admin_email'),
+	);
+		
+	$api_instance = new BlogImpressions_Api();
+	$result = json_decode($api_instance->submit_register_form($params), true);
+
+	if (!$result['error'] && isset($result['app_id'])) {
+		add_option('blogimpressions_app_id', $result['app_id']);
+		add_option('blogimpressions_key', $result['key']);
+		add_option('blogimpressions_secret', $result['secret']);
+		$api_instance->registered = true;
+	}
 }
